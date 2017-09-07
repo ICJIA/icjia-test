@@ -3,7 +3,15 @@
     <h1>{{ msg }}</h1>
     <br>
     <h1>{{ message }}</h1>
+    <p>Jin test 1: Leaning Vue info..</p>
+    <div>
+      <ul>
+        <li><a href="https://vuejs.org/v2/guide/">More info on Vue</a>&nbsp;&nbsp;&raquo;</li>
+        <li><a href="https://vuejs.org/v2/guide/syntax.html">More info on Vue templates</a>&nbsp;&nbsp;&raquo;</li>
+      </ul>
+    </div>
     <br>
+
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
