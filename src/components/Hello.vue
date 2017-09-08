@@ -1,9 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <br>
+
+    <hr>
     <h1>{{ message }}</h1>
-    <p>Jin test 1: Leaning Vue info..</p>
+    <p>Jin test 1: Learning Vue info..</p>
     <div>
       <ul>
         <li><a href="https://vuejs.org/v2/guide/">More info on Vue</a>&nbsp;&nbsp;&raquo;</li>
@@ -11,6 +12,16 @@
       </ul>
     </div>
     <br>
+
+    <p>Jin test 2: Count Up and Down eg.</p>
+    <div>
+      <h2>You are a <strong>{{level}}</strong></h2>
+      <p> current count: {{count}}</p>
+      <button v-on:click="countUp" class="btn btn-primary">Count Up</button>
+      <button @click="countDown" class="btn btn-primary">Count Down</button>
+    </div>
+    <br>
+    <hr>
 
     <h2>Essential Links</h2>
     <ul>
@@ -38,9 +49,37 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App. This is a test from salperri',
-      message: '& test from Jin...'
+      message: '& test from Jin...',
+      count: 10,
+
     }
-  }
+  },
+
+  methods: {
+    countUp: function() {
+      this.count += 10;
+    },
+
+    countDown: function() {
+      this.count -= 10;
+    },
+
+  },
+
+  computed: {
+      level: function() {
+        if (this.count >= 200) {
+          return "Pro";
+        } else if (this.count >= 100) {
+          return "Intermediate";
+        } else if (this.count >= 0) {
+          return "Beginner";
+        } else {
+          return "Banned";
+        }
+      },
+  },
+
 }
 </script>
 
